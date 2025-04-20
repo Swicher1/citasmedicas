@@ -10,6 +10,7 @@ import com.hospital.citasmedicas.repository.PacienteRepository;
 
 @Service
 public class PacienteService {
+    
      @Autowired
     private final PacienteRepository pacienteRepository;
 

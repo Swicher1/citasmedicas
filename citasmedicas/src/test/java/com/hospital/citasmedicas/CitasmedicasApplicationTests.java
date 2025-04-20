@@ -41,10 +41,15 @@ class CitasmedicasApplicationTests {
 
 	@Test
 	void debeRegistrarPaciente(){
+
 		when(pacienteRepository.save(any(Paciente.class))).thenReturn(paciente);
+
 		Paciente registrado=pacienteService.registrarPaciente(paciente);
+
 		assertNotNull(registrado);
+
 		assertEquals("Juan", registrado.getNombres());
+
 		verify(pacienteRepository,times(1)).save(paciente);
 	}
 
