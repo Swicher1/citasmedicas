@@ -3,6 +3,7 @@ package com.hospital.citasmedicas.model;
 import java.time.LocalDate;
 import java.util.List;
 
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
@@ -28,5 +29,6 @@ public class Paciente {
     private String contacto;
 
     @OneToMany(mappedBy = "paciente")
+   // @JsonManagedReference
     private List<CitaMedica> citas;
 }

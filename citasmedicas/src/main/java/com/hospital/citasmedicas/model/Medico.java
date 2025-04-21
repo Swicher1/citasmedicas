@@ -1,6 +1,8 @@
 package com.hospital.citasmedicas.model;
 import java.util.List;
 
+//import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.GeneratedValue;
@@ -24,5 +26,6 @@ public class Medico {
     private String cmp;
 
     @OneToMany(mappedBy = "medico")
+   // @JsonManagedReference
     private List<CitaMedica> citas;
 }

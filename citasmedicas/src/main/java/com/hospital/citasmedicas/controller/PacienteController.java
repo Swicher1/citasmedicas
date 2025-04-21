@@ -26,7 +26,6 @@ public class PacienteController {
         return ResponseEntity.ok(guardado);
     }
 
-    // Listar todos los pacientes
     @GetMapping("/listar")
     public ResponseEntity<List<Paciente>> obtenerPacientes() {
         return ResponseEntity.ok(pacienteService.obtenerTodos());
