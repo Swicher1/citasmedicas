@@ -28,10 +28,10 @@ public class CitaMedica {
     private String estado;
 
     @ManyToOne
-   // @JsonBackReference
+    //@JsonBackReference
     private Paciente paciente;
 
     @ManyToOne
-   // @JsonBackReference
+    //@JsonBackReference
     private Medico medico;
 }

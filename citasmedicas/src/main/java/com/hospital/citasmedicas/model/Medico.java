@@ -26,6 +26,6 @@ public class Medico {
     private String cmp;
 
     @OneToMany(mappedBy = "medico")
-   // @JsonManagedReference
+   ///@JsonManagedReference
     private List<CitaMedica> citas;
 }

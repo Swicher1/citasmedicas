@@ -3,6 +3,7 @@ package com.hospital.citasmedicas.model;
 import java.time.LocalDate;
 import java.util.List;
 
+//mport com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
