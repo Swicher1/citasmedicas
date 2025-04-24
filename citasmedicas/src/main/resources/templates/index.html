@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Regional de Piura - Sistema de Citas Médicas</title>
+    <link rel="stylesheet" src"/css/index.css">
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo" onclick="showPage('homepage')">
+                <img src="/api/placeholder/40/40" alt="Hospital San Rafael Logo">
+                <h1>Hospital San Rafael</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showPage('homepage')">Inicio</a></li>
+                    <li><a href="#" onclick="showPage('appointment-page')">Solicitar Cita</a></li>
+                    <li><a href="#" onclick="showPage('login-page')">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Página de inicio -->
+    <section id="homepage">
+        <div class="hero">
+            <div class="container">
+                <h2>Cuidando de tu salud cuando más lo necesitas</h2>
+                <p>Accede a nuestro sistema de gestión de citas médicas y recibe atención personalizada de nuestros especialistas.</p>
+                <a href="#" class="btn" onclick="showPage('appointment-page')">Solicitar Cita</a>
+            </div>
+        </div>
+
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Nuestras Especialidades</h2>
+            <div class="services">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/api/placeholder/400/300" alt="Cardiología">
+                    </div>
+                    <div class="service-content">
+                        <h3>Cardiología</h3>
+                        <p>Diagnóstico y tratamiento de enfermedades del corazón con tecnología de vanguardia.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/api/placeholder/400/300" alt="Pediatría">
+                    </div>
+                    <div class="service-content">
+                        <h3>Pediatría</h3>
+                        <p>Cuidado especializado para niños y adolescentes con enfoque en prevención.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/api/placeholder/400/300" alt="Neurología">
+                    </div>
+                    <div class="service-content">
+                        <h3>Neurología</h3>
+                        <p>Evaluación y tratamiento de trastornos del sistema nervioso central y periférico.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/api/placeholder/400/300" alt="Ortopedia">
+                    </div>
+                    <div class="service-content">
+                        <h3>Ortopedia</h3>
+                        <p>Especialistas en lesiones y condiciones del sistema músculo-esquelético.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/api/placeholder/400/300" alt="Ginecología">
+                    </div>
+                    <div class="service-content">
+                        <h3>Ginecología y Obstetricia</h3>
+                        <p>Atención integral para la salud femenina en todas las etapas de la vida.</p>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="/api/placeholder/400/300" alt="Dermatología">
+                    </div>
+                    <div class="service-content">
+                        <h3>Dermatología</h3>
+                        <p>Diagnóstico y tratamiento de enfermedades de la piel, cabello y uñas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="steps">
+            <div class="container">
+                <h2>¿Cómo funciona nuestro sistema de citas?</h2>
+                <div class="step-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Regístrate</h3>
+                        <p>Crea tu cuenta en nuestro sistema para acceder a todos los servicios.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Solicita tu cita</h3>
+                        <p>Elige la especialidad, el médico y la fecha que mejor se adapte a tu disponibilidad.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Recibe atención</h3>
+                        <p>Asiste a tu cita y recibe atención médica de calidad por nuestros especialistas.</p>
+                    </div>
+                </div>
+                <a href="#" class="btn" onclick="showPage('register-page')">Registrarme Ahora</a>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <div class="container">
+                <h2>Lo que dicen nuestros pacientes</h2>
+                <div class="testimonial-container">
+                    <div class="testimonial">
+                        <p class="testimonial-text">"El sistema de citas es muy intuitivo y fácil de usar. Me ha facilitado mucho el seguimiento de mis consultas médicas."</p>
+                        <p class="testimonial-author">- María López</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Excelente atención y un sistema que realmente funciona. Las notificaciones de recordatorio son muy útiles."</p>
+                        <p class="testimonial-author">- Carlos Rodríguez</p>
+                    </div>
+                    <div class="testimonial">
+                        <p class="testimonial-text">"Me encanta poder ver todo mi historial de citas y recibir los resultados de mis análisis en línea."</p>
+                        <p class="testimonial-author">- Ana Martínez</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>

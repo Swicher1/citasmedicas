@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Regional de Piura - Sistema de Citas Médicas</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}" />
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo" onclick="showPage('homepage')">
+                <img src="/api/placeholder/40/40" alt="Hospital San Rafael Logo">
+                <h1>Hospital San Rafael</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showPage('homepage')">Inicio</a></li>
+                    <li><a href="#" onclick="showPage('appointment-page')">Solicitar Cita</a></li>
+                    <li><a href="#" onclick="showPage('login-page')">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<section id="appointment-page" class="container">
+    <h2 class="form-title">Solicitar Cita Médica</h2>
+    <form class="appointment-form">
+        <div class="form-row">
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="specialty">Especialidad</label>
+                    <select id="specialty" class="form-control" required>
+                        <option value="">Seleccione una especialidad</option>
+                        <option value="cardiology">Cardiología</option>
+                        <option value="pediatrics">Pediatría</option>
+                        <option value="neurology">Neurología</option>
+                        <option value="orthopedics">Ortopedia</option>
+                        <option value="gynecology">Ginecología y Obstetricia</option>
+                        <option value="dermatology">Dermatología</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="doctor">Médico</label>
+                    <select id="doctor" class="form-control" required>
+                        <option value="">Seleccione un médico</option>
+                        <option value="doctor1">Dr. Juan Pérez</option>
+                        <option value="doctor2">Dra. María González</option>
+                        <option value="doctor3">Dr. Roberto Sánchez</option>
+                        <option value="doctor4">Dra. Laura Martínez</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="date">Fecha</label>
+                    <input type="date" id="date" class="form-control" required>
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="time">Hora</label>
+                    <select id="time" class="form-control" required>
+                        <option value="">Seleccione una hora</option>
+                        <option value="09:00">09:00</option>
+                        <option value="09:30">09:30</option>
+                        <option value="10:00">10:00</option>
+                        <option value="10:30">10:30</option>
+                        <option value="11:00">11:00</option>
+                        <option value="11:30">11:30</option>
+                        <option value="12:00">12:00</option>
+                        <option value="16:00">16:00</option>
+                        <option value="16:30">16:30</option>
+                        <option value="17:00">17:00</option>
+                        <option value="17:30">17:30</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="reason">Motivo de la consulta</label>
+            <textarea id="reason" class="form-control" rows="4" required></textarea>
+        </div>
+
+        <div class="form-row">
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="insurance">Seguro médico</label>
+                    <select id="insurance" class="form-control">
+                        <option value="">Seleccione su seguro</option>
+                        <option value="seguro1">Seguro Nacional de Salud</option>
+                        <option value="seguro2">MediSalud</option>
+                        <option value="seguro3">SegurMédica</option>
+                        <option value="private">Privado / Sin seguro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-col">
+                <div class="form-group">
+                    <label for="policy">Número de póliza</label>
+                    <input type="text" id="policy" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn">Solicitar Cita</button>
+        </div>
+    </form>
+</section>
+</body>
+</html>

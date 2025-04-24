@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Regional de Piura - Sistema de Citas Médicas</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}" />
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo" onclick="showPage('homepage')">
+                <img src="/api/placeholder/40/40" alt="Hospital San Rafael Logo">
+                <h1>Hospital San Rafael</h1>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" onclick="showPage('homepage')">Inicio</a></li>
+                    <li><a href="#" onclick="showPage('appointment-page')">Solicitar Cita</a></li>
+                    <li><a href="#" onclick="showPage('login-page')">Iniciar Sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+<!-- Dashboard de usuario -->
+<section id="dashboard-page" class="dashboard">
+    <div class="sidebar">
+        <ul class="sidebar-menu">
+            <li><a href="#" class="active">Inicio</a></li>
+            <li><a href="#">Mis citas</a></li>
+            <li><a href="#">Historial médico</a></li>
+            <li><a href="#">Resultados</a></li>
+            <li><a href="#">Medicamentos</a></li>
+            <li><a href="#">Pagos</a></li>
+            <li><a href="#" onclick="showPage('roles-page')">Permisos y Roles</a></li>
+            <li><a href="#" onclick="showPage('homepage')">Cerrar sesión</a></li>
+        </ul>
+    </div>
+    <div class="dashboard-content">
+        <div class="dashboard-header">
+            <h2 class="dashboard-title">Panel de Control</h2>
+            <a href="#" class="btn" onclick="showPage('appointment-page')">Nueva Cita</a>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <h3>Citas pendientes</h3>
+                <div class="number">3</div>
+            </div>
+            <div class="stat-card">
+                <h3>Citas completadas</h3>
+                <div class="number">12</div>
+            </div>
+            <div class="stat-card">
+                <h3>Resultados por ver</h3>
+                <div class="number">2</div>
+            </div>
+            <div class="stat-card">
+                <h3>Recetas activas</h3>
+                <div class="number">4</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>Próximas citas</h3>
+            <div class="appointments-list">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Hora</th>
+                            <th>Especialidad</th>
+                            <th>Médico</th>
+                            <th>Estado</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25/04/2025</td>
+                            <td>09:30</td>
+                            <td>Cardiología</td>
+                            <td>Dr. Juan Pérez</td>
+                            <td><span class="status status-confirmed">Confirmada</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-sm btn-outline">Detalles</button>
+                                    <button class="btn btn-sm btn-danger">Cancelar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>30/04/2025</td>
+                            <td>16:00</td>
+                            <td>Neurología</td>
+                            <td>Dra. María González</td>
+                            <td><span class="status status-pending">Pendiente</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-sm btn-outline">Detalles</button>
+                                    <button class="btn btn-sm btn-danger">Cancelar</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>05/05/2025</td>
+                            <td>11:00</td>
+                            <td>Dermatología</td>
+                            <td>Dra. Laura Martínez</td>
+                            <td><span class="status status-confirmed">Confirmada</span></td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-sm btn-outline">Detalles</button>
+                                    <button class="btn btn-sm btn-danger">Cancelar</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h3>Historial de citas recientes</h3>
+            <div class="appointments-list">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Especialidad</th>
+                            <th>Médico</th>
+                            <th>Diagnóstico</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>10/04/2025</td>
+                            <td>Medicina General</td>
+                            <td>Dr. Roberto Sánchez</td>
+                            <td>Resfriado común</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-sm btn-outline">Ver detalles</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>25/03/2025</td>
+                            <td>Oftalmología</td>
+                            <td>Dra. Ana Jiménez</td>
+                            <td>Astigmatismo</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-sm btn-outline">Ver detalles</button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>10/03/2025</td>
+                            <td>Medicina General</td>
+                            <td>Dr. Roberto Sánchez</td>
+                            <td>Examen rutinario</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn btn-sm btn-outline">Ver detalles</button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
