@@ -159,4 +159,23 @@ public ResponseEntity<MedicoDto> guardarMedico(@RequestBody MedicoDto medicoDTO)
         
         return ResponseEntity.ok(medicoDTOs);
     }
+     @GetMapping("/buscar")
+    public ResponseEntity<List<MedicoDto>> buscarPorNombre(
+            @RequestParam String nombre,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+        
+        Page<Medico> medicosPage = medicoService.buscarPorNombre(nombre, page, size);
+        
+        List<MedicoDto> medicoDTOs = medicosPage.getContent().stream()
+                .map(medico -> new MedicoDto(
+                        medico.getId(),
+                        medico.getNombre(),
+                        medico.getEspecialidad(),
+                        medico.getCmp()
+                ))
+                .collect(Collectors.toList());
+        
+        return ResponseEntity.ok(medicoDTOs);
+    }
 }

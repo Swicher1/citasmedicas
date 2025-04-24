@@ -70,4 +70,8 @@ public class MedicoService {
         Pageable pageable = PageRequest.of(page, size);
         return medicoRepository.findByEspecialidad(especialidad, pageable);
     }
+     public Page<Medico> buscarPorNombre(String nombre, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return medicoRepository.findByNombreContaining(nombre, pageable);
+    }
 }

@@ -12,4 +12,6 @@ public interface MedicoRepository extends JpaRepository<Medico,Long> {
  Optional<Medico> findByCmp(String cmp);
     
     Page<Medico> findByEspecialidad(String especialidad, Pageable pageable);
+    
+        Page<Medico> findByNombreContaining(String nombre, Pageable pageable);
 }
